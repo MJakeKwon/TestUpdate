@@ -1,0 +1,75 @@
+{
+  "name": "webapp-draft",
+  "version": "0.1.0",
+  "private": true,
+  "main": "electron-main.js",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "electron:dev": "npm run build && electron .",
+    "electron:build": "npm run build && electron-builder"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
+    "axios": "^1.7.9",
+    "chart.js": "^4.4.7",
+    "chartjs-adapter-date-fns": "^3.0.0",
+    "chartjs-plugin-datalabels": "^2.2.0",
+    "core-js": "^3.8.3",
+    "cors": "^2.8.5",
+    "date-fns": "^2.30.0",
+    "html5-qrcode": "^2.3.8",
+    "moment": "^2.30.1",
+    "pinia": "^2.3.0",
+    "qrcode": "^1.5.4",
+    "socket.io-client": "^4.8.1",
+    "swiper": "^11.2.1",
+    "v-calendar": "^3.1.2",
+    "vue": "^3.2.13",
+    "vue-chartjs": "^5.3.2",
+    "vue-qrcode-reader": "^5.7.1",
+    "vue-router": "^4.0.3",
+    "vue-slick-carousel": "^1.0.6",
+    "vue3-carousel": "^0.13.0",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/eslint-parser": "^7.26.5",
+    "@types/qrcode": "^1.5.5",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "autoprefixer": "^10.4.20",
+    "electron": "^35.1.2",
+    "electron-builder": "^26.0.12",
+    "electron-updater": "^6.6.2",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-vue": "^8.7.1",
+    "postcss-cli": "^11.0.0"
+  },
+  "build": {
+    "appId": "com.yourcompany.webappdraft",
+    "productName": "WebAppDraft",
+    "directories": {
+      "output": "dist_electron"
+    },
+    "files": [
+      "dist/**/*",
+      "electron-main.js"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "MJakeKwon",
+      "repo": "test_repo"
+    }
+  }
+}
