@@ -11,6 +11,7 @@
     "electron:build": "npm run build && electron-builder"
   },
   "dependencies": {
+    "electron-updater": "^6.6.2",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
@@ -47,7 +48,6 @@
     "autoprefixer": "^10.4.20",
     "electron": "^35.1.2",
     "electron-builder": "^26.0.12",
-    "electron-updater": "^6.6.2",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-vue": "^8.7.1",

@@ -7,4 +7,13 @@ const socket = io("http://localhost:5500", { // 서버 URL과 포트에 맞게 �
   withCredentials: true, // ✅ CORS 문제 해결
 });
 
+
+socket.on('connect', () => {
+  console.log('✅ WebSocket connected!');
+});
+
+socket.on('connect_error', (err) => {
+  console.error('❌ WebSocket connect error:', err);
+});
+
 export default socket;
